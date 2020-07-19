@@ -9,7 +9,6 @@ import MatchedProviders from './components/matched-providers/matched-providers';
 function App() {
   return (
     <div className="app">
-      App
       <Dashboard>
       </Dashboard>
       <Header>
