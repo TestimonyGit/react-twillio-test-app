@@ -1,13 +1,17 @@
-.dashboard-icon {
+.sidebar-icon {
   width: 100%;
-  height: 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 80px;
   justify-content: center;
 }
 
-.dashboard-icon span {
+.sidebar-icon:first-of-type {
+  height: 60px;
+}
+
+.sidebar-icon span {
   color: #fff;
   margin-top: 10px;
   font-family: 'Lato', Arial, sans-serif;

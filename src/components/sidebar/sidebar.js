@@ -1,27 +1,27 @@
 import React from 'react';
-import './dashboard.css';
-import DashboardIcon from './dashboard-icon.js';
+import './sidebar.css';
+import SidebarIcon from './sidebar-icon.js';
 import {ReactComponent as TrueCareSVG} from '../../assets/svgs/TrueCare24_logo.svg';
 import {ReactComponent as DashboardSVG} from '../../assets/svgs/Dashboard.svg';
 import {ReactComponent as FAQSVG} from '../../assets/svgs/FAQ.svg';
 import {ReactComponent as SignOutSVG} from '../../assets/svgs/Sign out.svg';
 
-function Dashboard() {
+function Sidebar() {
   return (
-    <div className="dashboard">
-      <DashboardIcon
+    <div className="sidebar">
+      <SidebarIcon
         icon={<TrueCareSVG/>}/>
-      <DashboardIcon
+      <SidebarIcon
         icon={<DashboardSVG/>}
         text="Dashboard"/>
-      <DashboardIcon 
+      <SidebarIcon 
         icon={<FAQSVG/>}
         text="FAQ"/>
-      <DashboardIcon 
+      <SidebarIcon 
         icon={<SignOutSVG/>}
         text="Sign out"/>
     </div>
   );
 }
 
-export default Dashboard;
+export default Sidebar;
