@@ -2,10 +2,16 @@ import React from 'react';
 import styles from './matched-providers.module.css';
 import MatchedProvidersRow from './matched-providers-row';
 
+import Actions from './actions';
+import SetStatus from './set-status';
+
 function MatchedProviders() {
   const numbers = [1, 2, 3, 4, 5];
-  const rows = numbers.map((number) =>
-    <MatchedProvidersRow key={number.toString()}/>
+  const rows = numbers.map(number =>
+    <MatchedProvidersRow
+      actionsOpen={number === 1 ? true : false}
+      setStatusOpen={number === 1 ? true : false}
+      key={number.toString()}/>
   );
 
   return (
@@ -19,6 +25,7 @@ function MatchedProviders() {
           {rows}
         </tbody>
       </table>
+      <SetStatus/>
     </div>
   );
 }
