@@ -7,12 +7,12 @@
   justify-content: space-between;
 }
 
-.header-left-side {
+.left-side {
   display: flex;
   align-items: center;
 }
 
-.header-left-side {
+.right-side {
   display: flex;
   align-items: center;
 }

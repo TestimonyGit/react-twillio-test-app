@@ -1,5 +1,5 @@
 import React from 'react';
-import './sidebar-icon.css';
+import styles from './sidebar-icon.module.css';
 
 function SidebarIcon(props) {
   const icon = props.icon ? props.icon : '';
@@ -8,7 +8,7 @@ function SidebarIcon(props) {
   return (
     <a 
       href="/"
-      className="sidebar-icon">
+      className={styles['sidebar-icon']}>
       {icon}
       {text}
     </a>

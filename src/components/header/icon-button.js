@@ -1,5 +1,5 @@
 import React from 'react';
-import './icon-button.css';
+import styles from './icon-button.module.css';
 
 function IconButton(props) {
   const icon = props.icon ? props.icon : '';
@@ -9,7 +9,7 @@ function IconButton(props) {
   return (
     <a 
       href="/"
-      className='icon-button'>
+      className={styles['icon-button']}>
       {icon}
       {text}
     </a>

@@ -33,27 +33,3 @@
   color: #728B9B;
   padding: 0 20px;
 }
-
-.matched-providers table tbody tr {
-  height: 50px;
-}
-
-.matched-providers table tbody td {
-  font-size: 14px;
-  color: #354650;
-  padding: 0 20px;
-}
-
-.matched-providers table tbody td svg {
-  vertical-align: middle;
-}
-
-.matched-providers table tbody td.matched-providers-type span {
-  width: 30px;
-  text-align: left;
-  display: inline-block;
-}
-
-.matched-providers table tbody td.matched-providers-name {
-  font-weight: 900;
-}

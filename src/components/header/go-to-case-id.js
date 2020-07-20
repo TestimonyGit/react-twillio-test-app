@@ -1,11 +1,11 @@
 import React from 'react';
-import './go-to-case-id.css';
+import styles from './go-to-case-id.module.css';
 import {ReactComponent as GoSVG} from '../../assets/svgs/Go.svg';
 
 function GoToCaseId() {
   return (
     <div 
-      className="go-to-case-id">
+      className={styles['go-to-case-id']}>
       <input 
         placeholder="Go to case ID#"/>
       <a href="/">

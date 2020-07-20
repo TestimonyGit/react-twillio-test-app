@@ -10,5 +10,5 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-// TODO: change sidebar to uls, encapsulate provider row into a component, complete table render, add hovers, setup phone call functions
+// TODO: encapsulate provider row into a component, complete table render, add hovers, setup phone call functions
 // TODO: add responsiveness, mobile ui, check react class randomization

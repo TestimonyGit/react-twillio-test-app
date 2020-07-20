@@ -1,5 +1,5 @@
 import React from 'react';
-import './header.css';
+import styles from './header.module.css';
 
 import {ReactComponent as BackIconSVG} from '../../assets/svgs/Back 1.svg';
 import {ReactComponent as FulfillmentKPIsSVG} from '../../assets/svgs/Fulfillment KPIs.svg';
@@ -10,8 +10,8 @@ import IconButton from './icon-button';
 
 function Header() {
   return (
-    <div className="header">
-      <ul className="header-left-side">
+    <div className={styles.header}>
+      <ul className={styles['left-side']}>
         <li>
           <IconButton
             icon={<BackIconSVG/>}
@@ -27,7 +27,7 @@ function Header() {
             text="Fulfillment KPIs"/>
         </li>
       </ul>
-      <ul className="header-right-side">
+      <ul className={styles['right-side']}>
         <LoginHeader/>
       </ul>
     </div>

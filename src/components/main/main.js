@@ -1,11 +1,11 @@
 import React from 'react';
-import './main.css';
+import styles from './main.module.css';
 
 import MatchedProviders from './matched-providers/matched-providers';
 
 function Main() {
   return (
-    <div className="main">
+    <div className={styles.main}>
       <MatchedProviders/>
     </div>
   );
