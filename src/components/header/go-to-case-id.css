@@ -1,0 +1,27 @@
+.go-to-case-id  {
+  display: flex;
+  width: 150px;
+  padding: 0 20px;
+}
+
+.go-to-case-id input {
+  background: #F5F9FC;
+  border: 1px solid #DBE5EB;
+  border-radius: 5px;
+  margin-right: -4px;
+  width: 100%;
+}
+
+.go-to-case-id input::placeholder {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19px;
+  color: #728B9B;
+  text-align: center;
+}
+
+.go-to-case-id svg {
+  display: block;
+}

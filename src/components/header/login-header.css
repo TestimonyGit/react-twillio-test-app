@@ -1,0 +1,11 @@
+.login-header {
+  min-width: 100px;
+  padding: 0 20px;
+  /* vertical align fix */
+  position: relative;
+  top: -1px;
+}
+
+.login-header svg {
+  margin-left: 10px;
+}

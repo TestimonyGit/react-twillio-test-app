@@ -1,0 +1,20 @@
+.icon-button {
+  min-width: 100px;
+  padding: 20px;
+}
+
+.icon-button span {
+  margin-left: 15px;
+  font-family: 'Lato';
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+  color: #354650;
+}
+
+.icon-button span.bold {
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 13px;
+}

@@ -6,10 +6,12 @@ function SidebarIcon(props) {
   const text = props.text ? <span>{props.text}</span> : '';
 
   return (
-    <div className="sidebar-icon">
+    <a 
+      href="/"
+      className="sidebar-icon">
       {icon}
       {text}
-    </div>
+    </a>
   );
 }
 

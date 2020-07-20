@@ -1,3 +1,18 @@
 .header {
-  
+  margin-left: 70px;
+  height: 60px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-left-side {
+  display: flex;
+  align-items: center;
+}
+
+.header-left-side {
+  display: flex;
+  align-items: center;
 }
