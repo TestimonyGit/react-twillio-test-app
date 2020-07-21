@@ -7,12 +7,11 @@ function IconButton(props) {
   const text = props.text ? <span className={textClasses}>{props.text}</span> : '';
 
   return (
-    <a 
-      href="/"
+    <button
       className={styles['icon-button']}>
       {icon}
       {text}
-    </a>
+    </button>
   );
 }
 

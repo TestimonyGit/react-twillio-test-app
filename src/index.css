@@ -109,6 +109,28 @@ table {
   border-spacing: 0;
 }
 
+button {
+  background: none;
+  box-shadow: 0px 0px 0px transparent;
+  border: 0px solid transparent;
+  text-shadow: 0px 0px 0px transparent;
+  padding: 0;
+  font: 'Lato', Arial;
+  text-align: left;
+}
+
+
+button:hover {
+  background: none;
+  box-shadow: 0px 0px 0px transparent;
+  border: 0px solid transparent;
+  text-shadow: 0px 0px 0px transparent;
+}
+
+button:focus {
+  outline:0;
+}
+
 #root {
   height: 100%;
 }

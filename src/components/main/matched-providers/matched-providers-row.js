@@ -31,26 +31,34 @@ class MatchedProvidersRow extends React.Component {
   }
 
   render() {
+    const contractStatus = this.props.provider.contracted ? <ContractedSVG/> : <NonContractedSVG/>;
+    const type = this.props.provider.type === "IC" ? <ICSVG/> : <HomeCareAgencySVG/>;
     return (
       <tr 
         className={styles.row}>
         <td className={styles.type}>
-          <span><ContractedSVG/></span>
-          <span><ICSVG/></span>
+          <span>{contractStatus}</span>
+          <span>{type}</span>
         </td>
-        <td className={styles.name}>Lucile Munoz</td>
-        <td>oceane@gmail.com</td>
-        <td>+1738473847</td>
-        <td>4324234</td>
-        <td className={styles.status}>
-          {SVGS[this.state.status]}<span>{this.state.status}</span>
+        <td className={styles.name}>{this.props.provider.name}</td>
+        <td>{this.props.provider.email}</td>
+        <td>{this.props.provider.phone}</td>
+        <td>{this.props.provider.id}</td>
+        <td 
+          className={styles.status}>
+          <button onClick={this.props.showSetStatus}>
+            {SVGS[this.props.provider.status]}
+            <span>{this.props.provider.status}</span>
+          </button>
         </td>
         <td>
-          <a className={styles['button'] + ' ' + styles['chat-button']} href='/'>Chat</a>
-          <a className={styles['button'] + ' ' + styles['call-button']} href='/'>Call</a>
-          <a className={styles['kebab']} href='/'>
+          <button className={styles['button'] + ' ' + styles['chat-button']} href='/'>Chat</button>
+          <button className={styles['button'] + ' ' + styles['call-button']} href='/'>Call</button>
+          <button 
+            onClick={(ev) => this.props.showActions(ev)}
+            className={styles['kebab']}>
             <KebabMenuSVG/>
-          </a>
+          </button>
         </td>
       </tr>
     );

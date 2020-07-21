@@ -10,9 +10,13 @@
   font-size: 14px;
   color: #354650;
   padding: 7px;
+  transform: translate(-100%);
 }
 
 .actions li {
   padding: 8px;
 }
 
+.actions li button:hover {
+  color: #00B9FF;
+}

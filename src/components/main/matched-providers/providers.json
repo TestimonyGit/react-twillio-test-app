@@ -1,0 +1,47 @@
+[
+  {
+    "contracted": true,
+    "type": "IC",
+    "name": "Lucile Munoz",
+    "email": "oceane.torp@brennan.us",
+    "phone": "+1 (727) 809-1539",
+    "id": "7543",
+    "status": "Contacting"
+  },
+  {
+    "contracted": true,
+    "type": "IC",
+    "name": "Winifred Henderson",
+    "email": "landen_deckow@hotmail.com",
+    "phone": "+1 (532) 831-5321",
+    "id": "9755",
+    "status": "Contacting"
+  },
+  {
+    "contracted": false,
+    "type": "IC",
+    "name": "Birdie Carson",
+    "email": "dietrich_amiya@yahoo.com",
+    "phone": "+1 (673) 223-7397",
+    "id": "3421",
+    "status": "Contacting"
+  },
+  {
+    "contracted": false,
+    "type": "HomeCareAgency",
+    "name": "Family Care SF, Inc",
+    "email": "dorothy.lesch@dickinson.me",
+    "phone": "+1 (866) 124-5438",
+    "id": "7675",
+    "status": "Contacting"
+  },
+  {
+    "contracted": true,
+    "type": "IC",
+    "name": "Barry Alexander",
+    "email": "reilly.julius@gmail.com",
+    "phone": "+1 (855) 163-9766",
+    "id": "5553",
+    "status": "Contacting"
+  }
+]

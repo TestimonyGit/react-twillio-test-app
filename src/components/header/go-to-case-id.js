@@ -8,9 +8,9 @@ function GoToCaseId() {
       className={styles['go-to-case-id']}>
       <input 
         placeholder="Go to case ID#"/>
-      <a href="/">
+      <button>
         <GoSVG/>
-      </a>
+      </button>
     </div>
   );
 }

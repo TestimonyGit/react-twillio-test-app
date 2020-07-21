@@ -15,13 +15,18 @@
   border-bottom: none;
 }
 
-.set-status li a {
+.set-status li button {
   width: 100%;
   display: inline-block;
   padding: 12px 12px 12px 0;
   box-sizing: border-box;
+  cursor: pointer;
 }
 
-.set-status li a svg {
+.set-status li button:hover {
+  background: #F4F7F9;
+}
+
+.set-status li button svg {
   width: 40px;  
 }
