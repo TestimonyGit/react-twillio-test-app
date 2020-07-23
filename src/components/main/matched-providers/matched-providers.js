@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './matched-providers.module.css';
 import MatchedProvidersRow from './matched-providers-row';
+import cloneDeep from 'lodash.clonedeep';
 
 import Actions from './actions';
 import SetStatus from './set-status';
@@ -13,45 +14,81 @@ class MatchedProviders extends React.Component {
     this.state = {
       showActions: false,
       showSetStatus: false,
-      popupTop: 0,
-      popupLeft: 0
+      popupTop: NaN,
+      popupLeft: NaN,
+      selectedProvider: NaN,
+      providers: cloneDeep(ProvidersJSON)
     }
   }
 
-  showActions = (event) => {
-    const boundingRect = event.currentTarget.getBoundingClientRect();
+  showActions = (index) => {
+    return (event) => {
+      const boundingRect = event.currentTarget.getBoundingClientRect();
 
-    this.setState({
-      ...this.state, 
-      showActions: true,
-      popupTop: boundingRect.top,
-      popupLeft: boundingRect.right
-    })
+      const stateClone = cloneDeep(this.state);
+
+      stateClone.showActions = true;
+      stateClone.showSetStatus = false;
+      stateClone.popupTop = boundingRect.top;
+      stateClone.popupLeft = boundingRect.right;
+      stateClone.selectedProvider = index;
+
+      setTimeout(() => {
+        this.setState(stateClone)
+      }, 0); // Workaround for set state order with hide popups
+    }
   }
 
-  showSetStatus = (event) => {
-    const boundingRect = event.currentTarget.getBoundingClientRect();
+  showSetStatus = (index) => {
+    return (event) => {
+      const boundingRect = event.currentTarget.getBoundingClientRect();
 
-    this.setState({
-      ...this.state, 
-      showSetStatus: true,
-      popupTop: boundingRect.top,
-      popupLeft: boundingRect.left
-    })
+      const stateClone = cloneDeep(this.state);
+
+      stateClone.showSetStatus = true;
+      stateClone.showActions = false;
+      stateClone.popupTop = boundingRect.top;
+      stateClone.popupLeft = boundingRect.left;
+      stateClone.selectedProvider = index;
+
+      setTimeout(() => {
+        this.setState(stateClone);
+      }, 0);
+    }
   }
 
   hidePopups = () => {
-    this.setState({
-      showActions: false,
-      showSetStatus: false
-    })
+    const stateClone = cloneDeep(this.state);
+
+    stateClone.showActions = false;
+    stateClone.showSetStatus = false;
+    stateClone.popupTop = NaN;
+    stateClone.popupLeft = NaN;
+    stateClone.selectedProvider = NaN;
+
+    this.setState(stateClone)
+  }
+
+  selectStatus = (status) => {
+    return () => {
+      const stateClone = cloneDeep(this.state);
+
+      stateClone.providers[this.state.selectedProvider].status = status;
+      stateClone.showActions = false;
+      stateClone.showSetStatus = false;
+      stateClone.popupTop = NaN;
+      stateClone.popupLeft = NaN;
+      stateClone.selectedProvider = NaN;
+
+      this.setState(stateClone);
+    }
   }
 
   render() {
-    const rows = ProvidersJSON.map((provider, index)=>
+    const rows = this.state.providers.map((provider, index)=>
       <MatchedProvidersRow
-        showActions={this.showActions}
-        showSetStatus={this.showSetStatus}
+        showActions={this.showActions(index)}
+        showSetStatus={this.showSetStatus(index)}
         provider={provider}
         key={index.toString()}/>
     );
@@ -67,6 +104,7 @@ class MatchedProviders extends React.Component {
       ? <SetStatus 
           top={this.state.popupTop}
           left={this.state.popupLeft}
+          selectStatus={this.selectStatus}
           outsideClick={this.hidePopups}/>
       : <></>;
 

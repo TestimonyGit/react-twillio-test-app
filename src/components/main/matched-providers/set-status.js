@@ -31,11 +31,11 @@ function SetStatus(props) {
       style={{top: props.top, left: props.left}}
       ref={wrapperRef}
       className={styles['set-status']}>
-      <li><button><Contacting0SVG/>Contacting</button></li>
-      <li><button><TalkedToTheClientSVG/>Talked to the client</button></li>
-      <li><button><AssessmentScheduledSVG/>Assessment scheduled</button></li>
-      <li><button><ContractSignedSVG/>Contract Signed</button></li>
-      <li><button><CancelTheClientSVG/>Cancel the client</button></li>
+      <li><button onClick={props.selectStatus('Contacting')}><Contacting0SVG/>Contacting</button></li>
+      <li><button onClick={props.selectStatus('Talked to the client')}><TalkedToTheClientSVG/>Talked to the client</button></li>
+      <li><button onClick={props.selectStatus('Assessment scheduled')}><AssessmentScheduledSVG/>Assessment scheduled</button></li>
+      <li><button onClick={props.selectStatus('Contract Signed')}><ContractSignedSVG/>Contract Signed</button></li>
+      <li><button onClick={props.selectStatus('Cancel the client')}><CancelTheClientSVG/>Cancel the client</button></li>
     </ul>
   );
 }

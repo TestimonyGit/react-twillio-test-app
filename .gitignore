@@ -20,3 +20,4 @@ yarn-error.log*
 
 # credentials
 production.env
+credentials.json

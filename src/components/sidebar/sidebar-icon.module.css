@@ -7,10 +7,6 @@
   justify-content: center;
 }
 
-.sidebar-icon:first-of-type {
-  height: 60px;
-}
-
 .sidebar-icon span {
   color: #fff;
   margin-top: 10px;

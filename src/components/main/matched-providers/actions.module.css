@@ -19,4 +19,5 @@
 
 .actions li button:hover {
   color: #00B9FF;
+  cursor: pointer;
 }

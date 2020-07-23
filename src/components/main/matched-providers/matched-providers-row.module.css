@@ -2,10 +2,18 @@
   height: 50px;
 }
 
+.row-cancel {
+  background: #FFEFF2!important; /* parent styles override */
+}
+
 .row td {
   font-size: 14px;
   color: #354650;
-  padding: 0 20px;
+  padding: 0 10px;
+}
+
+.row td:first-child {
+  padding: 0 10px 0 20px;
 }
 
 .type span {
@@ -60,12 +68,17 @@
   vertical-align: middle;
   position: relative;
   top: 1px;
-  margin-left: 10px;
   cursor: pointer;
+  width: 20px;
+  text-align: center;
 }
 
 .kebab:hover g {
   fill: #728B9B;
+}
+
+.status {
+  width: 170px;
 }
 
 .status button {
@@ -81,4 +94,5 @@
   position: relative;
   top: 2px;
   margin-right: 10px;
+  width: 17px;
 }

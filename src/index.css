@@ -115,7 +115,7 @@ button {
   border: 0px solid transparent;
   text-shadow: 0px 0px 0px transparent;
   padding: 0;
-  font: 'Lato', Arial;
+  font-family: 'Lato', Arial;
   text-align: left;
 }
 
