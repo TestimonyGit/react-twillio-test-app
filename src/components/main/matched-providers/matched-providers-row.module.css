@@ -10,6 +10,7 @@
   font-size: 14px;
   color: #354650;
   padding: 0 10px;
+  white-space: nowrap;
 }
 
 .row td:first-child {
@@ -78,7 +79,7 @@
 }
 
 .status {
-  width: 170px;
+  width: 180px;
 }
 
 .status button {
@@ -88,6 +89,10 @@
 .status span {
   border-bottom: 1px dashed #B8C5CD;
   padding-bottom: 1px;
+}
+
+.status button:hover span {
+  border-bottom: 1px dashed #00B9FF;
 }
 
 .status svg {

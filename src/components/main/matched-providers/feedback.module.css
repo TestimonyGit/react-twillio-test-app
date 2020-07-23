@@ -1,0 +1,80 @@
+.blackout {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: #182F3D;
+  opacity: 0.6;
+}
+
+.popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #FFFFFF;
+  border-radius: 6px;
+  padding: 20px 20px 10px 20px;
+  width: 260px;
+  height: 280px;
+}
+
+.exit {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  cursor: pointer;
+}
+
+.popup-info {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  color: #354650;
+  margin-bottom: 20px;
+}
+
+.stars {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.textarea {
+  height: 120px;
+  padding: 10px;
+  background: #F5F9FC;
+  border: 1px solid #D9E2EA;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  resize: none;
+  font-family: 'Lato';
+  outline: none;
+}
+
+.textarea::placeholder {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  color: #728B9B;
+}
+
+.save-button {
+  background: #54D0FF;
+  border-radius: 6px;
+  width: 100%;
+  text-transform: uppercase;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.save-button:hover {
+  background: #00B9FF;
+}

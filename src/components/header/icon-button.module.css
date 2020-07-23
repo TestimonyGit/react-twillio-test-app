@@ -1,6 +1,7 @@
 .icon-button {
   min-width: 100px;
   padding: 20px;
+  white-space: nowrap;
 }
 
 .icon-button span {
@@ -17,4 +18,32 @@
   font-weight: 900;
   text-transform: uppercase;
   font-size: 13px;
+}
+
+.icon-button.mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 750px) {
+  .icon-button {
+    min-width: 0px;
+  }
+
+  .icon-button span {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .icon-button.mobile {
+    display: block;
+  }
+
+  .icon-button {
+    padding: 0 10px;
+  }
+
+  .icon-button:first-of-type {
+    padding-left: 20px;
+  }
 }

@@ -3,9 +3,11 @@ import styles from './main.module.css';
 
 import MatchedProviders from './matched-providers/matched-providers';
 
-function Main() {
+function Main(props) {
+  const mainClasses = props.sidebarOpen ? styles.main + ' ' + styles['sidebar-open'] : styles.main;
+
   return (
-    <div className={styles.main}>
+    <div className={mainClasses}>
       <MatchedProviders/>
     </div>
   );

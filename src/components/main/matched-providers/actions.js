@@ -26,7 +26,7 @@ function Actions(props) {
       ref={wrapperRef}
       className={styles.actions}>
       <li><button>Send intro</button></li>
-      <li><button>Provide feedback</button></li>
+      <li><button onClick={props.showFeedback}>Provide feedback</button></li>
       <li><button>Send reminder</button></li>
       <li><button>Background check</button></li>
     </ul>

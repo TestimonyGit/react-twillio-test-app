@@ -7,3 +7,13 @@
   z-index: 50;
   background-color: #264E66;
 }
+
+@media only screen and (max-width: 550px) {
+  .sidebar {
+    display: none;
+  }
+
+  .sidebar.sidebar-open {
+    display: block;
+  }
+}

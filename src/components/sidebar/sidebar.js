@@ -6,9 +6,11 @@ import {ReactComponent as DashboardSVG} from '../../assets/svgs/Dashboard.svg';
 import {ReactComponent as FAQSVG} from '../../assets/svgs/FAQ.svg';
 import {ReactComponent as SignOutSVG} from '../../assets/svgs/Sign out.svg';
 
-function Sidebar() {
+function Sidebar(props) {
+  const sidebarClasses = props.sidebarOpen ? styles.sidebar + ' ' + styles['sidebar-open'] : styles.sidebar;
+
   return (
-    <ul className={styles.sidebar}>
+    <ul className={sidebarClasses}>
       <li>
         <SidebarIcon
           icon={<TrueCareSVG/>}/>

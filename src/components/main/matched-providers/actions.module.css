@@ -17,7 +17,11 @@
   padding: 8px;
 }
 
+.actions li button {
+  white-space: nowrap;
+  cursor: pointer;
+}
+
 .actions li button:hover {
   color: #00B9FF;
-  cursor: pointer;
 }

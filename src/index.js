@@ -9,6 +9,3 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root')
 );
-
-// TODO: add hovers, setup phone call functions, add jsons data and display by it
-// TODO: add responsiveness, mobile ui, remove strict mode

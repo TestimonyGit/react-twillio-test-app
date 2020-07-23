@@ -9,3 +9,20 @@
 .login-header svg {
   margin-left: 10px;
 }
+
+@media only screen and (max-width: 750px) {
+  .login-header {
+    padding: 0 20px 0 0;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .login-header span {
+    width: 50px;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+  }
+}
